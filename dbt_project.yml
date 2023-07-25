@@ -20,7 +20,12 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  advanced_dbt:
+   course_advanced_dbt:
     +materialized: view
     +grants:
       select: ['transformer', 'reporter']
+
+seeds:
+  dbt_project_evaluator:
+    dbt_project_evaluator_exceptions:
+      +enabled: false
